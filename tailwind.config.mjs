@@ -2,7 +2,14 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				boxing: ['Boxing', 'Adjusted Arial Fallback', 'sans-serif'],
+				'boxing-striped': ['Boxing Striped', 'Adjusted Arial Fallback', 'sans-serif'],
+			}
+		},
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-animated')
+	  ],
 }
